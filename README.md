@@ -3,7 +3,10 @@
 
 ## 安装
 使用 pip 安装：
-pip install mysdk
+pip install git+https://github.com/GreatWzi/mysdk-com.git
+
+更新：
+pip install --upgrade git+https://github.com/GreatWzi/mysdk-com.git
 
 ## git使用
 添加当前文件夹中的所有更改到 Git

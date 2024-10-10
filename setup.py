@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='mysdk',           # 库的名称
+    name='mysdk-sdk',           # 库的名称
     version='0.0',                # 版本号
     packages=find_packages(where='src'),  # 查找 src 目录下的包
     package_dir={'': 'src'},      # 指定包的目录
