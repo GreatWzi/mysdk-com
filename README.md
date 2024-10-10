@@ -22,7 +22,7 @@ git push -u origin main
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 将远程仓库地址更改为 SSH 格式：
-git remote set-url origin git@github.com:yourusername/mysdk-com.git
+git remote set-url origin git@github.com:GreatWzi/mysdk-com.git
 
 
 ## 实现的功能
