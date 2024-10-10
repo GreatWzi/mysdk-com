@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='mysdk-sdk',           # 库的名称
+    name='mysdk_com',           # 库的名称
     version='0.0',                # 版本号
     packages=find_packages(where='src'),  # 查找 src 目录下的包
     package_dir={'': 'src'},      # 指定包的目录
@@ -11,5 +11,5 @@ setup(
     author='GreatWzi',           # 作者信息
     author_email='1165997296@qq.com',  # 作者邮箱
     description='init',  # 简短描述
-    url='https://github.com/GreatWi/mysdk',  # 项目主页
+    url='https://github.com/GreatWi/mysdk-sdk',  # 项目主页
 )
