@@ -23,3 +23,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 将远程仓库地址更改为 SSH 格式：
 git remote set-url origin git@github.com:GreatWzi/mysdk.git
+
+
+## 实现的功能
+1. json 文件的读写
