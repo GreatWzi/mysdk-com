@@ -15,5 +15,11 @@ git commit -m "提交信息"
 连接到 GitHub 仓库
 git remote add origin https://github.com/your_username/your_library.git
 
-把本地的 master 分支推送到 GitHub 的 origin 远程仓库。
-git push -u origin master
+把本地的 main 分支推送到 GitHub 的 origin 远程仓库。
+git push -u origin main
+
+生成 SSH 密钥
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+将远程仓库地址更改为 SSH 格式：
+git remote set-url origin git@github.com:GreatWzi/mysdk.git
