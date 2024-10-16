@@ -10,6 +10,7 @@ pip install --upgrade git+https://github.com/GreatWzi/mysdk-com.git
 
 使用 SSH 方式进行克隆
 pip install --upgrade git+ssh://git@github.com/GreatWzi/mysdk-com.git
+
 ## git使用
 添加当前文件夹中的所有更改到 Git
 git add .
