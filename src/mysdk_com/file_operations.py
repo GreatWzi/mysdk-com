@@ -19,7 +19,7 @@ def write_json(info, directory=None, filename=None):
     :param filename: 可选，指定输出文件的名称
     """
     now_day = datetime.datetime.now().strftime("%Y%m%d")
-    path_output_dir = Path(directory) if directory else Path.cwd() / "output_data_" + now_day
+    path_output_dir = Path(directory) if directory else Path.cwd() / ("output_data_" + now_day)
     if not path_output_dir.exists():
         path_output_dir.mkdir(parents=True, exist_ok=True)
     
