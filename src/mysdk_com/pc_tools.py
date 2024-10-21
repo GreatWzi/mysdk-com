@@ -23,7 +23,7 @@ def pcd_to_las(pcd_file, las_file):
     las.write(las_file)
     print(f'Converted {pcd_file} to {las_file}')
 
-def run_potree_converter(input_dir, output_dir, potree_converter_path):
+def potree_converter(input_dir, output_dir, potree_converter_path):
     # 检查输入和输出目录是否存在
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)

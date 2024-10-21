@@ -13,5 +13,6 @@ from .data_process import (
 )
 
 from .pc_tools import (
-    pcd_to_las
+    pcd_to_las,
+    potree_converter
 )
