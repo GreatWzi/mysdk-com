@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-
+import moore
 setup(
     name='mysdk_com',           # 库的名称
     version='0.0.2',                # 版本号
