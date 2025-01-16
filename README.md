@@ -46,7 +46,7 @@ git remote set-url origin git@github.com:GreatWzi/mysdk-com.git
 
 
 
-## Potree
+# Potree
 1. PCD -> LAS
 2. run_potree
 3. import_potree_json
@@ -55,7 +55,7 @@ git remote set-url origin git@github.com:GreatWzi/mysdk-com.git
         "info": {
             "lod": {
                 "baseUrl": "into_directionary",
-                "loadUrl": "meatdata.json",
+                "loadUrl": "metadata.json",
                 "offset": [111, 222, 333]
             },
             "locations": [],
@@ -65,6 +65,34 @@ git remote set-url origin git@github.com:GreatWzi/mysdk-com.git
     # Setting: 
         "labelMode": "dimension4_lod"
 
+## 鱼眼相机 k1, k2, p1, p2, k3
+
+## 针孔相机 k1, k2, k1, k3
+
+# 叠帧
+[
+    {
+        'info': {
+            'pcdUrl': [],
+            "imgUrls": [],
+            'locations': [
+                {
+                    "name": "1",
+                    "posMatrix": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.013,
+                        -0.013,
+                        0.015
+                    ]
+                }
+            ],
+            'cameraConfigs': []
+        }
+    }
+]
+
 # 4D_导入
 [
     {
@@ -73,20 +101,22 @@ git remote set-url origin git@github.com:GreatWzi/mysdk-com.git
                 "https://xxxx/merge_points_cloud.pcd"
             ],
             "locations": [
-                "name": "1",
-                "urls": [
-                    "https://xxxxx/1705562215250224128/view1_1705562215205599644.jpeg",
-                    "https://xxxxx/1705562215250224128/view2_1705562215207296860.jpeg",
-                    "https://xxxxx/1705562215250224128/view3_1705562215205636124.jpeg"
-                ],
-                "posMatrix": [
-                    -136.1863152466695,
-                    238.271010306351,
-                    322.327854012037,
-                    0.01803773815273014,
-                    -0.007197288215565558,
-                    -1.606926104790546
-                ]
+                {
+                    "name": "1",
+                    "urls": [
+                        "https://xxxxx/1705562215250224128/view1_1705562215205599644.jpeg",
+                        "https://xxxxx/1705562215250224128/view2_1705562215207296860.jpeg",
+                        "https://xxxxx/1705562215250224128/view3_1705562215205636124.jpeg"
+                    ],
+                    "posMatrix": [
+                        -136.1863152466695,
+                        238.271010306351,
+                        322.327854012037,
+                        0.01803773815273014,
+                        -0.007197288215565558,
+                        -1.606926104790546
+                    ]
+                }
             ],
             "cameraConfigs": [
                 [
@@ -137,3 +167,43 @@ git remote set-url origin git@github.com:GreatWzi/mysdk-com.git
         }
     }
 ]
+
+# 问卷_预标注导入
+[
+    {
+        "info": {
+            "data": [
+                { "content": "测试图片1", "type": "TEXT"},
+                { "content": "XXX", "type": "IMAGE"},
+            ]
+        },
+        "preData": [
+            {
+                "id": 1,
+                "hash": "1_data_type",
+                "label": "1_data_type",
+                "value": "geometry",
+                "drawType": "QUESTION",
+                "count": 1
+            }
+        ]
+    }
+]
+
+
+
+# 导出工程格式
+class MyExport():
+    def __init__(self, taskId, exportId):
+        pass
+
+    def work(source_data, out_path):
+        # source_data -> 解压后的 originData.json
+        # out_path -> 输出路径
+
+        try:
+            # Type your code here...
+            
+        except Exception as e:
+            print(e)
+            return False
