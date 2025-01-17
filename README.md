@@ -32,3 +32,7 @@ git remote set-url origin git@github.com:GreatWzi/mysdk-com.git
 
 git config --global https.proxy http://192.168.34.247:30002
 git config list --global
+
+# Markdown
+- 可视化模式
+    - ctrl + k v

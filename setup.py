@@ -11,5 +11,5 @@ setup(
     author='GreatWzi',           # 作者信息
     author_email='1165997296@qq.com',  # 作者邮箱
     description='init',  # 简短描述
-    url='https://github.com/GreatWi/mysdk-sdk',  # 项目主页
+    url='https://github.com/GreatWi/com_zhengshu',  # 项目主页
 )
