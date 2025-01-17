@@ -1,27 +1,67 @@
-# Potree
-1. PCD -> LAS
-2. run_potree
-3. import_potree_json
-    # format:
-    [
+<!-- TOC -->
+- [导出工程格式](#导出工程格式)
+- [Question](#question)
+- [Camera Configs](#camera-configs)
+- [叠帧](#叠帧)
+- [4D](#4d)
+- [LOD](#lod)
+  - [Input Format](#input-format)
+  - [Task Setting](#task-setting)
+
+
+# 导出工程格式
+```
+class MyExport():
+    def __init__(self, taskId, exportId):
+        pass
+
+    def work(source_data, out_path):
+        # source_data -> 解压后的 originData.json
+        # out_path -> 输出路径
+
+        try:
+            # Type your code here...
+            
+        except Exception as e:
+            print(e)
+            return False
+```
+
+# Question
+```
+[
+    {
         "info": {
-            "lod": {
-                "baseUrl": "into_directionary",
-                "loadUrl": "metadata.json",
-                "offset": [111, 222, 333]
-            },
-            "locations": [],
-            "cameraConfigs": []
-        }
-    ]
-    # Setting: 
-        "labelMode": "dimension4_lod"
+            "data": [
+                { "content": "测试图片1", "type": "TEXT"},
+                { "content": "XXX", "type": "IMAGE"},
+            ]
+        },
+        "preData": [
+            {
+                "id": 1,
+                "hash": "1_data_type",
+                "label": "1_data_type",
+                "value": "geometry",
+                "drawType": "QUESTION",
+                "count": 1
+            }
+        ]
+    }
+]
+```
 
-## 鱼眼相机 k1, k2, p1, p2, k3
 
-## 针孔相机 k1, k2, k1, k3
+# Camera Configs
+- 鱼眼相机 
+    - k1, k2, p1, p2, k3
+- 针孔相机
+    - k1, k2, k1, k3
+
+
 
 # 叠帧
+```
 [
     {
         'info': {
@@ -44,8 +84,10 @@
         }
     }
 ]
+```
 
-# 4D_导入
+# 4D
+```
 [
     {
         "info": {
@@ -119,42 +161,28 @@
         }
     }
 ]
+```
 
-# 问卷_预标注导入
+# LOD
+- steps
+    - .pcd -> .las
+    - .las -> potree
+## Input Format
+```
 [
-    {
-        "info": {
-            "data": [
-                { "content": "测试图片1", "type": "TEXT"},
-                { "content": "XXX", "type": "IMAGE"},
-            ]
+    "info": {
+        "lod": {
+            "baseUrl": "into_directionary",
+            "loadUrl": "metadata.json",
+            "offset": [111, 222, 333]
         },
-        "preData": [
-            {
-                "id": 1,
-                "hash": "1_data_type",
-                "label": "1_data_type",
-                "value": "geometry",
-                "drawType": "QUESTION",
-                "count": 1
-            }
-        ]
+        "locations": [],
+        "cameraConfigs": []
     }
 ]
+```
 
-
-# 导出工程格式
-class MyExport():
-    def __init__(self, taskId, exportId):
-        pass
-
-    def work(source_data, out_path):
-        # source_data -> 解压后的 originData.json
-        # out_path -> 输出路径
-
-        try:
-            # Type your code here...
-            
-        except Exception as e:
-            print(e)
-            return False
+## Task Setting
+`
+"labelMode": "dimension4_lod"
+`
