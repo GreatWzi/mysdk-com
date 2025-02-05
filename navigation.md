@@ -2,3 +2,5 @@
   - [Selenium](https://www.selenium.dev/zh-cn/documentation/)
 - SDK
   - [requests](https://www.cnblogs.com/goldsunshine/p/17501390.html)
+  - [pyQt](https://maicss.com/)
+  - [fastApi](https://fastapi.org.cn/)
