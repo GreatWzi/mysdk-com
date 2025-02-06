@@ -14,7 +14,7 @@
   - navigation.md *各类学习文档*
   - requrement.txt *依赖包*
   - setup.py *安装脚本*
-  
+
 ## 安装
 使用 pip 安装：
 pip install git+https://github.com/GreatWzi/mysdk-com.git
